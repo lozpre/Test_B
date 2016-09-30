@@ -52,4 +52,28 @@ class Test {
 	}
 
 
+	public static void ShellSort(Ordenacion o,int[]array){
+		
+		int [] N = o.ordenar(array);
+		int n = N.length;
+
+		for(int i = N.length/2; i > 0; i=i==2?1:(int)(i/2.2) ){
+			
+			for(int j =i; j < N.length; j++){
+				
+				int tmp = N[j];
+				
+					for(int z= j;z>=i&&tmp<N[z-i]; z=i){
+						
+						N[z] = N[z - i];
+						
+					}
+				
+			}
+			
+		}
+		
+	}
+
+
 }
